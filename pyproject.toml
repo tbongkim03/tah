@@ -12,7 +12,7 @@ license = {text = "MIT"}
 
 
 [project.scripts]
-my-history = 'tah.cli:cmd'
+my-history = 'tah.cli:cmd11'
 
 [tool.pdm]
 distribution = false
