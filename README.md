@@ -21,7 +21,7 @@ mkdir 1932
    rm 1104
 ```
 
-##Dev env setting
+## Dev env setting
 ```
 $ git clone <URL>
 $ cd <PJT_NAME>
