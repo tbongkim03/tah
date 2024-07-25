@@ -21,6 +21,7 @@ distribution = false
 test = "pytest"
 ctest = "pytest --cov"
 stest = "pytest -s"
+giti = "pip install git+https://github.com/tbongkim03/tah.git@0.2.0/args"
 
 [tool.pytest.ini_options]
 pythonpath = [
