@@ -6,7 +6,7 @@ def read_data():
 
 def top(n, dt):
     df = read_data()
-    fdf = df[df['dt'] == date]
+    fdf = df[df['dt'] == dt]
     sdf = fdf.sort_values(by='cnt', ascending=False).head(n)
     ddf = sdf.drop(columns=['dt'])
     
