@@ -12,14 +12,24 @@ def cmd11():
             description='What the program does',
             epilog='Text at the bottom of help')
 
-    parser.add_argument('filename') # positional argument
-    parser.add_argument('-c', '--count') # option that takes a value
-    parser.add_argument('-v', '--verbose', action='store_true') # on/off flag
+    parser.add_argument('-s', '--scount')
+    #parser.add_argument('filename') # positional argument
+    parser.add_argument('-t', '--top') # option that takes a value
+    parser.add_argument('-d', '--dt') # on/off flag 값이 있으면 true 출력
 
     args = parser.parse_args()
-    print(args.filename, args.count, args.verbose)
+    print(args.scount, args.top, args.dt)
 
-    if True:
-        print("verbose ON")
+    if args.scount:
+        print(f"-s -> {args.scount}")
+    elif args.top:
+        print(f"-t -> {args.top}")
+        if args.dt:
+            print(f"-d -> {args.dt}")
+        else:
+            #TODO
+            pass
+    elif None:
+        print("help 명령어 추가")
     else:
-        print("fff")
+        pass
