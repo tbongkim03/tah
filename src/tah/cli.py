@@ -30,7 +30,7 @@ def cmd11():
             # TODO 특정 날짜의 명령어 TOP N
         else:
             #TODO 에러나 안내메시지
-            Argumentparser.error('이 -t <Num>option는 -d <YYYY-MM-DD>와 함께 사용하세요')
+            parser.error('이 -t <Num>option는 -d <YYYY-MM-DD>와 함께 사용하세요')
             pass
     else:
         parser.print_help()
