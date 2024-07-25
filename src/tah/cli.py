@@ -1,5 +1,7 @@
 import argparse
 from tah.db.utils import count, top
+from tabulate import tabulate
+
 def hello_msg():
     return "hello"
 
@@ -22,8 +24,9 @@ def cmd11():
     elif args.top:
         if args.dt:
             num, date = int(args.top), args.dt
-            top_n = top(num, date)
-            print(top_n)
+            df = top(num, date)
+            headers = ["cmd","cnt"]
+            print(tabulate(df, headers, tablefmt="grid"))
         else:
             parser.error('이 -t <Num>option는 -d <YYYY-MM-DD>와 함께 사용하세요')
             pass

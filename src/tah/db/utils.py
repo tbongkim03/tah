@@ -1,4 +1,5 @@
 import pandas as pd
+from tabulate import tabulate
 
 def read_data():
     df = pd.read_parquet('~/data/parquet')
@@ -9,8 +10,7 @@ def top(n, dt):
     fdf = df[df['dt'] == dt]
     sdf = fdf.sort_values(by='cnt', ascending=False).head(n)
     ddf = sdf.drop(columns=['dt'])
-    
-    return ddf.to_string(index=False)
+    return ddf
 
 def count(query):
     df = read_data()
