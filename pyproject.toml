@@ -11,6 +11,9 @@ readme = "README.md"
 license = {text = "MIT"}
 
 
+[project.scripts]
+my-history = 'tah.cli:cmd'
+
 [tool.pdm]
 distribution = false
 
