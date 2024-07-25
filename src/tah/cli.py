@@ -31,7 +31,7 @@ def cmd11():
         if args.dt:
             print(f"-d -> {args.dt}")
             # TODO 특정 날짜의 명령어 TOP N
-            top_n = top(arg.top, args.dt)
+            top_n = top(args.top, args.dt)
             print(top_n)
         else:
             #TODO 에러나 안내메시지
