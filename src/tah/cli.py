@@ -14,7 +14,6 @@ def cmd11():
     parser.add_argument('-d', '--dt') # on/off flag 값이 있으면 true 출력
 
     args = parser.parse_args()
-    print(args.scount, args.top, args.dt)
 
     if args.scount:
         command = args.count
