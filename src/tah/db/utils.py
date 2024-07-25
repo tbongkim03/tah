@@ -6,14 +6,14 @@ def read_data():
 
 def top(n, dt):
     df = read_data()
-    fdf = df[df['dt'] == dt]
+    fdf = df[df['dt'] == date]
     sdf = fdf.sort_values(by='cnt', ascending=False).head(n)
     ddf = sdf.drop(columns=['dt'])
-    r = ddf.to_string(index=False)
-    return r
+    
+    return ddf.to_string(index=False)
 
 def count(query):
     df = read_data()
-    fdf = df[df['dt'].str.contains(query)]
-    cnt = fdf['cnt'].sum
+    fdf = df[df['cmd'].str.contains(query)]
+    cnt = fdf['cnt'].sum()
     return cnt

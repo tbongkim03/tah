@@ -21,17 +21,19 @@ def cmd11():
     print(args.scount, args.top, args.dt)
 
     if args.scount:
-        cmd_cnt = count(args.scount)
-        print(cmd_cnt)
+        command = args.count
+        count = count(command)
+        print(f'cmd : {command}를 사용한 횟수는 {count}회 입니다.')
         #print(f"-s -> {args.scount}")
         # TODO 명령어 카운트
 
     elif args.top:
         print(f"-t -> {args.top}")
         if args.dt:
-            print(f"-d -> {args.dt}")
+            #print(f"-d -> {args.dt}")
             # TODO 특정 날짜의 명령어 TOP N
-            top_n = top(args.top, args.dt)
+            num, date = int(args.top), args.dt
+            top_n = top(num, date)
             print(top_n)
         else:
             #TODO 에러나 안내메시지
