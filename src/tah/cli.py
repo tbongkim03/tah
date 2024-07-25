@@ -1,5 +1,5 @@
 import argparse
-
+from tah.db.utils import count, top
 def hello_msg():
     return "hello"
 
@@ -21,13 +21,18 @@ def cmd11():
     print(args.scount, args.top, args.dt)
 
     if args.scount:
-        print(f"-s -> {args.scount}")
+        cmd_cnt = count(args.scount)
+        print(cmd_cnt)
+        #print(f"-s -> {args.scount}")
         # TODO 명령어 카운트
+
     elif args.top:
         print(f"-t -> {args.top}")
         if args.dt:
             print(f"-d -> {args.dt}")
             # TODO 특정 날짜의 명령어 TOP N
+            top_n = top(arg.top, args.dt)
+            print(top_n)
         else:
             #TODO 에러나 안내메시지
             parser.error('이 -t <Num>option는 -d <YYYY-MM-DD>와 함께 사용하세요')
