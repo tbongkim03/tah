@@ -20,7 +20,6 @@ def cmd11():
         count = count(command)
         print(f'cmd : {command}를 사용한 횟수는 {count}회 입니다.')
     elif args.top:
-        print(f"-t -> {args.top}")
         if args.dt:
             num, date = int(args.top), args.dt
             top_n = top(num, date)
