@@ -22,7 +22,7 @@ mkdir 1932
 ```
 
 ## Dev env setting
-```
+```bash
 $ git clone <URL>
 $ cd <PJT_NAME>
 $ pdm install
@@ -30,6 +30,15 @@ $ [pdm test|pytest]
 
 # option
 $ pdm add -dG test pytest pytest-cov
+```
+
+### deploy
+```bash
+# dev branch 
+- https://github.com/tbongkim03/tah.git@0.2.0/args
+
+# main
+- https://github.com/tbongkim03/tah.git
 ```
 
 ### ref
