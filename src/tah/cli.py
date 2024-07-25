@@ -30,6 +30,7 @@ def cmd11():
             # TODO 특정 날짜의 명령어 TOP N
         else:
             #TODO 에러나 안내메시지
+            parser.print_help()
             pass
     else:
         parser.print_help()
