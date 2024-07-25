@@ -21,12 +21,18 @@ mkdir 1932
    rm 1104
 ```
 
-## Dev env setting
+### dev env setting
 ```bash
 $ git clone <URL>
 $ cd <PJT_NAME>
+$ pyenv virtualenv 3.11.9 clean 
+$ pyenv global clean 
+$ rm -rf .venv
+$ pdm venv create
+$ source .venv/bin/activate
 $ pdm install
-$ [pdm test|pytest]
+$ pdm list
+$ pytest
 
 # option
 $ pdm add -dG test pytest pytest-cov
