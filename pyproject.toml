@@ -17,6 +17,11 @@ my-history = 'tah.cli:cmd11'
 [tool.pdm]
 distribution = false
 
+[tool.pdm.scripts]
+test = "pytest"
+ctest = "pytest --cov"
+stest = "pytest -s"
+
 [tool.pdm.dev-dependencies]
 test = [
     "pytest>=8.3.1",
