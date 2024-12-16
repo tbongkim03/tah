@@ -1,15 +1,42 @@
 [project]
 name = "tah"
-version = "0.1.0"
+version = "0.2.0"
 description = "Default template for PDM package"
 authors = [
     {name = "tbongkim03", email = "tbongkim03@gmial.com"},
 ]
-dependencies = []
+dependencies = [
+    "pandas>=2.2.2",
+    "pyarrow>=17.0.0",
+]
 requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
 
+[project.scripts]
+my-history = 'tah.cli:cmd11'
+
 [tool.pdm]
 distribution = false
+
+[tool.pdm.scripts]
+test = "pytest"
+ctest = "pytest --cov"
+stest = "pytest -s"
+giti = "pip install git+https://github.com/tbongkim03/tah.git@0.2.0/args"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ",","src"
+]
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.3.1",
+    "pytest-cov>=5.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tbongkim03/tah"
+Issues = "https://github.com/tbongkim03/tah/issues"
